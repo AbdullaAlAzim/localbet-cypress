@@ -1,0 +1,14 @@
+version: '3'
+services:
+  cypress:
+    image: cypress/included:12.6.0    # Use the Cypress Docker image
+    build:
+      context: .                      # Build using the Dockerfile in the current directory
+    volumes:
+      - ./cypress:/e2e/cypress        # Map the Cypress test files
+      - ./cypress.config.js:/e2e/cypress.config.js  # Map the config file
+      - ./screenshots:/e2e/screenshots # Map the screenshots folder
+      - ./videos:/e2e/videos          # Map the videos folder
+      - ./reports:/e2e/reports        # Map the test reports folder
+    working_dir: /e2e                 # Set the working directory inside the container
+    entrypoint: ["npx", "cypress", "run"] # Run Cypress tests

@@ -1,0 +1,25 @@
+{
+  "name": "localbit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+    "test:loginTest": "npx cypress run --config pageLoadTimeout=10000 --spec cypress/e2e/tests/loginTest.cy.js",
+    "test:registerTest": "npx cypress run --config pageLoadTimeout=10000 --spec cypress/e2e/tests/registerTest.cy.js",
+    "test:profileTest": "npx cypress run --config pageLoadTimeout=10000 --spec cypress/e2e/tests/profileTest.cy.js",
+    "test:depositTest": "npx cypress run --config pageLoadTimeout=10000 --spec cypress/e2e/tests/depositTest.cy.js",    
+    "test:Alltest": "npx cypress run --config pageLoadTimeout=10000 --spec 'cypress/e2e/tests/**/*.cy.js'"
+  }
+
+,
+  "author": "rashed",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "cypress": "^13.14.2",
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
