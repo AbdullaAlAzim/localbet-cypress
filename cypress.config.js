@@ -4,6 +4,7 @@ module.exports = defineConfig({
   video: false, 
   reporter: "cypress-mochawesome-reporter",
   e2e: {
+    specPattern: 'cypress/e2e/test/**/*.cy.{js,jsx,ts,tsx}',
    
     screenshotOnRunFailure: true, // This ensures screenshots are taken when a test fails
     baseUrl: "https://dev-user.localbet.xyz/",
